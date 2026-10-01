@@ -1,5 +1,6 @@
 
 import Hero from './components/Hero'; // 1. Kita impor komponennya di sini
+import ActivityCard from './components/ActivityCard';
 
 function App() {
   return (
@@ -12,17 +13,27 @@ function App() {
         {/*grid layout unutuk hp, tablet, dan desktop*/}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl h-80 flex items-center justify-center">
-            <span className="text-neutral-600 font-mono">Modul Trail (segera hadir)</span>
-          </div>
+          {/* 3. Kita panggil ActivityCard dengan props */}
+          <ActivityCard 
+            category="Hiking"
+            date="16 Jun 2026"
+            title="Pendakian Gunung Arjuno"
+            description="Eksplorasi jalur pendakian dengan elevasi menantang. Persiapan fisik dan mental diuji sepanjang rute."
+          />
 
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl h-80 flex items-center justify-center">
-            <span className="text-neutral-600 font-mono">Modul Run (segera hadir)</span>
-          </div>
+          <ActivityCard 
+            category="Running"
+            date="17 Agustus 2026"
+            title="Malang City Run"
+            description="Menyusuri rute urban Malang. Pace stabil dan cuaca mendukung untuk mencetak personal record baru."
+          />
 
-          <div className="bg-neutral-900 border border-neutral-800 rounded-xl h-80 flex items-center justify-center">
-            <span className="text-neutral-600 font-mono">Modul Coffee (segera hadir)</span>
-          </div>
+          <ActivityCard 
+            category="Coffee"
+            date="07 Sep 2026"
+            title="Kopi Tuku Malang"
+            description="Rehat sejenak menikmati Americano dengan nuansa kafe yang minimalis dan kalcer abis."
+          />
 
         </div>
       </main>
