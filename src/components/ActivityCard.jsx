@@ -1,4 +1,4 @@
-function ActivityCard({ title, category, date, description, }) {
+function ActivityCard({ title, category, date, description, onClick }) {
     return (
         <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition-colors duration-300 group">
             <div>
@@ -20,7 +20,7 @@ function ActivityCard({ title, category, date, description, }) {
             </div>
 
             <div className="mt-6 pt-4 border-t border-neutral-800">
-                <button className="text-sm font-mono text-neutral-500 hover:text-amber-500 transition-colors flex items-center gap-2">
+                <button onClick={onClick} className="text-sm font-mono text-neutral-500 hover:text-amber-500 transition-colors flex items-center gap-2">
                     <span>Lihat Detail</span>
                 </button>
             </div>
