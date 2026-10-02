@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Hero from './components/Hero'; // 1. Kita impor komponennya di sini
 import ActivityCard from './components/ActivityCard';
 import DetailModal from './components/DetailModal';
+import WeatherWidget from './components/WeatherWidget';
 
 function App() {
   const activitiesData = [
@@ -56,6 +57,11 @@ function App() {
       
       {/* Nanti kita akan tambahkan komponen lain di bawah sini */}
       <main className="container mx-auto px-4 py-16 max-w-6xl">
+      {/* Tambahkan widget cuaca di sini */}
+      <div className="flex justify-center mb-8">
+        <WeatherWidget />
+      </div>
+
         <div className="flex flex-wrap justify-center gap-4 mb-12">
         {categories.map(category => (
           <button
