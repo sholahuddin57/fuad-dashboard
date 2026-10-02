@@ -3,6 +3,7 @@ import Hero from './components/Hero'; // 1. Kita impor komponennya di sini
 import ActivityCard from './components/ActivityCard';
 import DetailModal from './components/DetailModal';
 import WeatherWidget from './components/WeatherWidget';
+import NavBar from './components/NavBar';
 
 function App() {
   const activitiesData = [
@@ -52,6 +53,8 @@ function App() {
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-200 selection:bg-amber-500 selection:text-neutral-900">
+     
+      <NavBar />
       {/* 2. Kita panggil komponennya seperti menulis tag HTML */}
       <Hero />
       

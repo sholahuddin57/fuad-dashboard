@@ -1,4 +1,10 @@
+import { useDashboardStore } from '../store/useDashboardStore';
+
 function ActivityCard({ title, category, date, description, onClick }) {
+    const togglePin = useDashboardStore((state) => state.togglePin);
+    const pinnedActivities = useDashboardStore((state) => state.pinnedActivities);
+    const isPinned = pinnedActivities.includes(title);
+    
     return (
         <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition-colors duration-300 group">
             <div>
@@ -10,6 +16,13 @@ function ActivityCard({ title, category, date, description, onClick }) {
                     <span className="text-xs text-neutral-500 font-mono">
                         {date}
                     </span>
+                    <button 
+                        onClick={() => togglePin(title)}
+                        className={`text-xl transition-transform ${isPinned ? 'scale-110 opacity-100' : 'opacity-30 hover:opacity-100'}`}
+              title="Pin this moment"
+                    >
+                        {isPinned ? '📌' : '📍'}
+                    </button>
                 </div>
                 <h3 className="text-xl font-bold text-neutral-200 mb-2 group-hover:text-amber-400 transition-colors">
                     {title}
