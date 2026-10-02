@@ -12,7 +12,7 @@ function App() {
       title: "Pendakian Gunung Arjuno",
       description: "Eksplorasi jalur pendakian dengan elevasi menantang. Persiapan fisik dan mental diuji sepanjang rute.",
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126466.86438766442!2d112.51865241029273!3d-7.761019672659039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78809117621c97%3A0xbdc6f4b6559cb31c!2sGn.%20Arjuno!5e0!3m2!1sid!2sid!4v1717395000000",
-      gallery: ["https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=800&auto=format&fit=crop", "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?q=80&w=800&auto=format&fit=crop"]
+      gallery: ["./images/hikingsholah1.jpg", "./images/hikingsholah2.jpg"]
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ function App() {
       title: "Malang City Run",
       description: "Menyusuri rute urban Malang. Pace stabil dan cuaca mendukung untuk mencetak personal record baru.",
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.289381866475!2d112.62329869999999!3d-7.969016099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd628285c50870f%3A0x70a95e25ea946b2f!2sJl.%20Besar%20Ijen%2C%20Kec.%20Klojen%2C%20Kota%20Malang%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1790836640521!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"strict-origin-when-cross-origin\"></>",
-      gallery: ["https://images.unsplash.com/photo-1552674605-15c37059ce21?q=80&w=800&auto=format&fit=crop", "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=800&auto=format&fit=crop"]
+      gallery: ["./images/runningsholah1.jpeg", "./images/runningsholah2.JPG"]
     },
     {
       id: 3,
