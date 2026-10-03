@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 
 function Hero() {
   return (
@@ -5,14 +6,19 @@ function Hero() {
       {/* Efek noise/grain analog tipis */}
       <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] mix-blend-overlay pointer-events-none"></div>
       
-      <div className="z-10 text-center space-y-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="z-10 text-center space-y-4"
+      >
         <h1 className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-700 tracking-tighter">
           FUAD DASHBOARD
         </h1>
         <p className="text-neutral-400 font-mono text-sm md:text-base uppercase tracking-[0.3em]">
           Software Engineering • Analog Aesthetics • Exploration
         </p>
-      </div>
+      </motion.div>
     </section>
   );
 }

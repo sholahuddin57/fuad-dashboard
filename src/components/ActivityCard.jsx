@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useDashboardStore } from '../store/useDashboardStore';
 
 function ActivityCard({ title, category, date, description, onClick }) {
@@ -6,7 +7,12 @@ function ActivityCard({ title, category, date, description, onClick }) {
     const isPinned = pinnedActivities.includes(title);
     
     return (
-        <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition-colors duration-300 group">
+        <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-50px' }}
+        transition={{ duration: 0.5 }}
+        className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition-colors duration-300 group">
             <div>
                 <div className="flex justify-between items-start mb-4">
                     <span className="text-xs font-mono text-amber-500 uppercase tracking-widest bg-amber-500/10 px-2 py-1 rounded">
@@ -37,7 +43,7 @@ function ActivityCard({ title, category, date, description, onClick }) {
                     <span>Lihat Detail</span>
                 </button>
             </div>
-        </div>
+        </motion.div>
     );
 }
 

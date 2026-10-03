@@ -1,10 +1,17 @@
+import { motion } from 'framer-motion';
+
 function DetailModal({ activity, onClose }) {
   if (!activity) return null;
 
   return (
     // Latar belakang hitam transparan dengan efek blur (neo-noir vibe)
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-      <div className="bg-neutral-900 border border-neutral-800 rounded-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl flex flex-col">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.3, ease: 'easeOut' }}
+        exit={{ opacity: 0, scale: 0.9 }}
+        className="bg-neutral-900 border border-neutral-800 rounded-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl flex flex-col">
         
         {/* Header Modal */}
         <div className="sticky top-0 z-10 flex justify-between items-center p-6 border-b border-neutral-800 bg-neutral-900/90 backdrop-blur-md">
@@ -33,7 +40,7 @@ function DetailModal({ activity, onClose }) {
           </div>
         </div>
 
-      </div>
+      </motion.div>
     </div>
   );
 }
